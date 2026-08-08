@@ -1,0 +1,41 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Gallery from "./pages/Gallery";
+import Contact from "./pages/Contact.tsx";
+import Skills from "./pages/Skills";
+import Projects from "./pages/Projects";
+
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+
+        <Route
+          path="/"
+          element={<Home />}
+        />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact" element={<Contact />} />
+
+        <Route
+          path="/about"
+          element={<About />}
+        />
+
+        <Route
+          path="/skills"
+          element={<Skills />}
+        />
+        <Route
+          path="/projects"
+          element={<Projects />}
+        />
+
+      </Routes>
+    </BrowserRouter>
+  );
+}
+
+export default App;
