@@ -13,34 +13,24 @@ import "./Gallery.css";
 
 const galleryItems = [
   {
-    image: "/images/gallery1.jpeg",
-    title: "Behind the Work",
-    description: "A glimpse into my development journey.",
+    image: "./images/gallery1.jpeg",
+    title: "The Person Behind The Code",
+    description: "A glimpse of the person behind the ideas, projects, and lines of code.",
+  },
+  {
+    image: "./images/gallery4.png",
+    title: "A Day in The Mountains",
+    description: "A breathtaking moment from an unforgettable journey through the mountains and snowy landscapes.",
   },
   {
     image: "/images/gallery2.jpeg",
-    title: "Building Ideas",
-    description: "Turning concepts into real projects.",
+    title: "Lost in The Green",
+    description: "A peaceful moment surrounded by breathtaking mountain views, lush greenery, and the beauty of nature.",
   },
   {
-    image: "/images/gallery3.jpeg",
-    title: "Development",
-    description: "Where ideas start becoming reality.",
-  },
-  {
-    image: "/images/gallery4.jpeg",
-    title: "Experimenting",
-    description: "Exploring new technologies and ideas.",
-  },
-  {
-    image: "/images/gallery5.jpeg",
-    title: "Project Journey",
-    description: "Some moments from building my projects.",
-  },
-  {
-    image: "/images/gallery6.jpeg",
-    title: "More Than Code",
-    description: "The person and process behind the projects.",
+    image: "/images/gallery3.png",
+    title: "A Moment from Tarapith",
+    description: "A personal memory captured during my visit to the peaceful and spiritual surroundings of Tarapith Kali Mandir.",
   },
 ];
 

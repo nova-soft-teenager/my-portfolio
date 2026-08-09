@@ -60,7 +60,7 @@ function Contact() {
           </nav>
 
           <a
-            href="novasoft27@gmail.com"
+            href="mailto:novasoft27@gmail.com"
             className="hire-button"
           >
             Hire Me
@@ -144,7 +144,7 @@ function Contact() {
             {/* EMAIL */}
 
             <a
-              href="novasoft27@gmail.com"
+              href="mailto:novasoft27@gmail.com"
               className="contact-info-card"
             >
 
@@ -183,18 +183,20 @@ function Contact() {
             <div className="social-links">
 
                     <a
-                        href="novasoft27@gmail.com"
+                        href="mailto:novasoft27@gmail.com"
                         aria-label="Email"
                     >
                         <Mail size={18} />
                     </a>
 
                     <a
-                        href="https://www.instagram.com/jeetxrangon.1/"
-                        aria-label="Instagram"
-                    >
-                        <FaInstagram size={18} />
-                    </a>
+                  href="https://www.instagram.com/jeetxrangon.1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram size={18} />
+                </a>
 
                     </div>
 
@@ -221,57 +223,67 @@ function Contact() {
             </div>
 
 
-            <form>
+            <form
+                  action="https://formspree.io/f/mgawobdb"
+                  method="POST"
+                >
+                  {/* NAME */}
+                  <div className="form-group">
+                    <label>Your Name</label>
 
-              <div className="form-group">
-                <label>Your Name</label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your name"
+                      required
+                    />
+                  </div>
 
-                <input
-                  type="text"
-                  placeholder="Enter your name"
-                />
-              </div>
+                  {/* EMAIL */}
+                  <div className="form-group">
+                    <label>Email Address</label>
 
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Enter your email"
+                      required
+                    />
+                  </div>
 
-              <div className="form-group">
-                <label>Email Address</label>
+                  {/* SUBJECT */}
+                  <div className="form-group">
+                    <label>Subject</label>
 
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                />
-              </div>
+                    <input
+                      type="text"
+                      name="subject"
+                      placeholder="What would you like to discuss?"
+                      required
+                    />
+                  </div>
 
+                  {/* MESSAGE */}
+                  <div className="form-group">
+                    <label>Message</label>
 
-              <div className="form-group">
-                <label>Subject</label>
+                    <textarea
+                      name="message"
+                      rows={5}
+                      placeholder="Tell me about your idea..."
+                      required
+                    ></textarea>
+                  </div>
 
-                <input
-                  type="text"
-                  placeholder="What would you like to discuss?"
-                />
-              </div>
-
-
-              <div className="form-group">
-                <label>Message</label>
-
-                <textarea
-                  rows={5}
-                  placeholder="Tell me about your idea..."
-                ></textarea>
-              </div>
-
-
-              <button
-                type="submit"
-                className="contact-submit"
-              >
-                Send Message
-                <Send size={16} />
-              </button>
-
-            </form>
+                  {/* BUTTON */}
+                  <button
+                    type="submit"
+                    className="contact-submit"
+                  >
+                    Send Message
+                    <Send size={16} />
+                  </button>
+                </form>
 
           </motion.div>
 
