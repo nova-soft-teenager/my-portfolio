@@ -18,7 +18,7 @@ const galleryItems = [
     description: "A glimpse of the person behind the ideas, projects, and lines of code.",
   },
   {
-    image: "./images/gallery4.png",
+    image: "./images/imgage.png",
     title: "A Day in The Mountains",
     description: "A breathtaking moment from an unforgettable journey through the mountains and snowy landscapes.",
   },
