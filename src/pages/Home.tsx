@@ -95,45 +95,27 @@ function Home() {
         {mobileMenuOpen && (
           <div className="mobile-menu">
 
-            <Link
-              to="/"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/" onClick={() => setMobileMenuOpen(false)}>
               Home
             </Link>
 
-            <Link
-              to="/about"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/about" onClick={() => setMobileMenuOpen(false)}>
               About
             </Link>
 
-            <Link
-              to="/skills"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/skills" onClick={() => setMobileMenuOpen(false)}>
               Skills
             </Link>
 
-            <Link
-              to="/projects"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/projects" onClick={() => setMobileMenuOpen(false)}>
               Projects
             </Link>
 
-            <Link
-              to="/gallery"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/gallery" onClick={() => setMobileMenuOpen(false)}>
               Gallery
             </Link>
 
-            <Link
-              to="/contact"
-              onClick={() => setMobileMenuOpen(false)}
-            >
+            <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>
               Contact
             </Link>
 
@@ -160,68 +142,43 @@ function Home() {
 
           <div className="hero-container">
 
-
             {/* ================= LEFT CONTENT ================= */}
 
             <motion.div
               className="hero-content"
-              initial={{
-                opacity: 0,
-                x: -40,
-              }}
-              animate={{
-                opacity: 1,
-                x: 0,
-              }}
-              transition={{
-                duration: 0.8,
-              }}
+              initial={{ opacity: 0, x: -40 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
             >
 
               <div className="hero-intro">
-
                 <span className="intro-line"></span>
-
-                <span>
-                  Welcome to my world
-                </span>
-
+                <span>Welcome to my world</span>
               </div>
 
 
               <h1>
-
                 Hi, I'm
-
                 <span className="name">
                   Jeet
                 </span>
-
               </h1>
 
 
               <h2>
-
                 Developer
-
                 <span>•</span>
-
                 AI Builder
-
                 <span>•</span>
-
                 App Creator
-
               </h2>
 
 
               <p className="hero-description">
-
                 I turn ideas into real-world software.
                 I build modern applications, explore AI,
                 and create practical solutions to
                 interesting problems.
-
               </p>
 
 
@@ -236,7 +193,6 @@ function Home() {
                   View My Work
                   <ArrowUpRight size={17} />
                 </Link>
-
 
                 <Link
                   to="/contact"
@@ -277,51 +233,29 @@ function Home() {
 
             <motion.div
               className="hero-visual"
-              initial={{
-                opacity: 0,
-                scale: 0.85,
-              }}
-              animate={{
-                opacity: 1,
-                scale: 1,
-              }}
-              transition={{
-                duration: 1,
-                delay: 0.2,
-              }}
+              initial={{ opacity: 0, scale: 0.85 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
             >
-
-              {/* ORBITS */}
 
               <div className="orbit orbit-one"></div>
               <div className="orbit orbit-two"></div>
               <div className="orbit orbit-three"></div>
 
-
-              {/* GLOW */}
-
               <div className="photo-glow"></div>
 
 
-              {/* PROFILE PHOTO */}
-
               <div className="profile-photo">
-
                 <img
                   src="/images/profile.jpeg"
                   alt="Jeet Biswas"
                 />
-
               </div>
 
 
-              {/* FLOATING CARD */}
-
               <motion.div
                 className="floating-card"
-                animate={{
-                  y: [0, -10, 0],
-                }}
+                animate={{ y: [0, -10, 0] }}
                 transition={{
                   duration: 4,
                   repeat: Infinity,
@@ -332,15 +266,8 @@ function Home() {
                 <span className="status-dot"></span>
 
                 <div>
-
-                  <small>
-                    Currently
-                  </small>
-
-                  <strong>
-                    Building
-                  </strong>
-
+                  <small>Currently</small>
+                  <strong>Building</strong>
                 </div>
 
               </motion.div>
@@ -355,22 +282,15 @@ function Home() {
           <motion.a
             href="#home"
             className="scroll-indicator"
-            animate={{
-              y: [0, 8, 0],
-            }}
+            animate={{ y: [0, 8, 0] }}
             transition={{
               duration: 1.8,
               repeat: Infinity,
               ease: "easeInOut",
             }}
           >
-
-            <span>
-              Scroll to explore
-            </span>
-
+            <span>Scroll to explore</span>
             <ArrowDown size={16} />
-
           </motion.a>
 
         </section>
