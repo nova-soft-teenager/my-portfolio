@@ -180,10 +180,10 @@ function About() {
               transition={{ duration: 0.7 }}
             >
 
-              <div className="about-label">
-                <span></span>
-                WHAT I DO
-              </div>
+              <div className="about-label about-what-i-do">
+                  <span></span>
+                  WHAT I DO
+                </div>
 
               <h2>
                 Turning ideas into

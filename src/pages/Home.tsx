@@ -1,16 +1,23 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import "../App.css";
+
 import {
   ArrowDown,
   ArrowUpRight,
   Mail,
+  Menu,
+  X,
 } from "lucide-react";
+
 import { FaInstagram } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
   return (
-    <div className="portfolio">
+    <div className="home-page">
 
       {/* ================= BACKGROUND ================= */}
 
@@ -24,9 +31,14 @@ function Home() {
       <header className="navbar">
         <div className="nav-container">
 
+          {/* LOGO */}
+
           <Link to="/" className="logo">
             JB
           </Link>
+
+
+          {/* DESKTOP NAVIGATION */}
 
           <nav className="nav-links">
 
@@ -56,12 +68,87 @@ function Home() {
 
           </nav>
 
+
+          {/* DESKTOP HIRE BUTTON */}
+
           <Link to="/contact" className="hire-button">
             Hire Me
             <ArrowUpRight size={15} />
           </Link>
 
+
+          {/* MOBILE MENU BUTTON */}
+
+          <button
+            className="mobile-menu-button"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
         </div>
+
+
+        {/* ================= MOBILE MENU ================= */}
+
+        {mobileMenuOpen && (
+          <div className="mobile-menu">
+
+            <Link
+              to="/"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Home
+            </Link>
+
+            <Link
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              About
+            </Link>
+
+            <Link
+              to="/skills"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Skills
+            </Link>
+
+            <Link
+              to="/projects"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Projects
+            </Link>
+
+            <Link
+              to="/gallery"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Gallery
+            </Link>
+
+            <Link
+              to="/contact"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Contact
+            </Link>
+
+            <Link
+              to="/contact"
+              className="mobile-hire-button"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              Hire Me
+              <ArrowUpRight size={16} />
+            </Link>
+
+          </div>
+        )}
+
       </header>
 
 
@@ -72,6 +159,7 @@ function Home() {
         <section className="hero" id="home">
 
           <div className="hero-container">
+
 
             {/* ================= LEFT CONTENT ================= */}
 
@@ -145,11 +233,8 @@ function Home() {
                   to="/projects"
                   className="primary-button"
                 >
-
                   View My Work
-
                   <ArrowUpRight size={17} />
-
                 </Link>
 
 
@@ -165,23 +250,25 @@ function Home() {
 
               {/* ================= SOCIAL LINKS ================= */}
 
-             <div className="social-links">
+              <div className="social-links">
 
-                  <a
-                    href="novasoft27@gmail.com"
-                    aria-label="Email"
-                  >
-                    <Mail size={18} />
-                  </a>
+                <a
+                  href="mailto:novasoft27@gmail.com"
+                  aria-label="Email"
+                >
+                  <Mail size={18} />
+                </a>
 
-                  <a
-                    href="https://www.instagram.com/jeetxrangon.1/"
-                    aria-label="Instagram"
-                  >
-                    <FaInstagram size={18} />
-                  </a>
+                <a
+                  href="https://www.instagram.com/jeetxrangon.1/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Instagram"
+                >
+                  <FaInstagram size={18} />
+                </a>
 
-                </div>
+              </div>
 
             </motion.div>
 
@@ -207,9 +294,7 @@ function Home() {
               {/* ORBITS */}
 
               <div className="orbit orbit-one"></div>
-
               <div className="orbit orbit-two"></div>
-
               <div className="orbit orbit-three"></div>
 
 
@@ -230,7 +315,7 @@ function Home() {
               </div>
 
 
-              {/* ================= FLOATING CARD ================= */}
+              {/* FLOATING CARD */}
 
               <motion.div
                 className="floating-card"

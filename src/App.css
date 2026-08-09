@@ -783,6 +783,7 @@ textarea {
   .scroll-indicator {
     bottom: 20px;
   }
+}
 
   /* ================= ABOUT SECTION ================= */
 
@@ -1607,6 +1608,500 @@ textarea {
 
     padding: 14px;
   }
+}
+/* =====================================================
+   HOME PAGE - MOBILE REFINEMENT
+===================================================== */
+
+@media (max-width: 500px) {
+
+  .hero {
+    min-height: auto;
+    padding-top: 105px;
+    padding-bottom: 45px;
+  }
+
+  .hero-container {
+    width: 88%;
+    gap: 35px;
+  }
+
+  /* INTRO */
+
+  .hero-intro {
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+
+  /* MAIN TITLE */
+
+  .hero h1 {
+    font-size: 56px;
+    line-height: 0.95;
+    letter-spacing: -2.5px;
+  }
+
+  .hero h1 .name {
+    margin-top: 8px;
+  }
+
+  /* ROLE */
+
+  .hero h2 {
+    margin-top: 24px;
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  /* DESCRIPTION */
+
+  .hero-description {
+    max-width: 370px;
+    margin-top: 18px;
+
+    font-size: 15px;
+    line-height: 1.75;
+  }
+
+  /* BUTTONS */
+
+  .hero-buttons {
+    width: 100%;
+    margin-top: 28px;
+
+    gap: 12px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: min(340px, 100%);
+    height: 50px;
+
+    font-size: 14px;
+  }
+
+  /* SOCIAL ICONS */
+
+  .social-links {
+    margin-top: 28px;
+  }
+
+  .social-links a {
+    width: 46px;
+    height: 46px;
+  }
+
+  /* PROFILE SECTION */
+
+  .hero-visual {
+    width: 100%;
+    max-width: 370px;
+
+    margin-top: 5px;
+  }
+
+  .profile-photo {
+    width: 270px;
+    height: 350px;
+  }
+
+  .photo-glow {
+    width: 230px;
+    height: 230px;
+  }
+
+  /* ORBITS */
+
+  .orbit-one {
+    width: 360px;
+    height: 180px;
+  }
+
+  .orbit-two {
+    width: 340px;
+    height: 240px;
+  }
+
+  .orbit-three {
+    width: 310px;
+    height: 310px;
+  }
+
+  /* FLOATING CARD */
+
+  .floating-card {
+    right: 5px;
+    bottom: 45px;
+
+    padding: 10px 14px;
+  }
+
+  .floating-card small {
+    font-size: 9px;
+  }
+
+  .floating-card strong {
+    font-size: 12px;
+  }
+
+  /* SCROLL INDICATOR */
+
+  .scroll-indicator {
+    display: none;
+  }
+
+
+
+
+  /* =====================================================
+   MOBILE NAVIGATION + MOBILE HOME
+===================================================== */
+
+/* Mobile menu desktop-এ hide থাকবে */
+
+.mobile-menu-button,
+.mobile-menu {
+  display: none;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+  /* ================= NAVBAR ================= */
+
+  .navbar {
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .nav-container {
+    width: 90%;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Desktop links hide */
+
+  .nav-links {
+    display: none;
+  }
+
+  /* Desktop hire button hide */
+
+  .hire-button {
+    display: none;
+  }
+
+  /* Logo */
+
+  .logo {
+    font-size: 22px;
+  }
+
+  /* Menu button */
+
+  .mobile-menu-button {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(139, 92, 246, 0.28);
+    border-radius: 10px;
+
+    background: rgba(12, 12, 18, 0.75);
+
+    color: #ffffff;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(14px);
+
+    transition: 0.25s ease;
+  }
+
+  .mobile-menu-button:hover {
+    border-color: #8b5cf6;
+  }
+
+
+  /* ================= MOBILE DROPDOWN ================= */
+
+  .mobile-menu {
+    position: absolute;
+
+    top: calc(100% + 8px);
+    left: 5%;
+    right: 5%;
+
+    padding: 12px;
+
+    border: 1px solid rgba(139, 92, 246, 0.22);
+    border-radius: 16px;
+
+    background: rgba(8, 8, 13, 0.96);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow:
+      0 20px 60px rgba(0, 0, 0, 0.45),
+      0 0 35px rgba(124, 58, 237, 0.08);
+
+    flex-direction: column;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(-10px);
+
+    transition: 0.25s ease;
+
+    z-index: 9999;
+  }
+
+  .mobile-menu.open {
+    display: flex;
+
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(0);
+  }
+
+  .mobile-menu a {
+    padding: 14px 15px;
+
+    border-radius: 10px;
+
+    color: #a7a7b2;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: 0.2s ease;
+  }
+
+  .mobile-menu a:hover {
+    color: #ffffff;
+
+    background: rgba(139, 92, 246, 0.1);
+  }
+
+  .mobile-menu .mobile-hire-button {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 5px;
+
+    background: linear-gradient(
+      135deg,
+      #7c3aed,
+      #9333ea
+    );
+
+    color: #ffffff;
+  }
+
+
+  /* =====================================================
+     MOBILE HERO
+  ===================================================== */
+
+  .hero {
+    position: relative;
+
+    min-height: 100svh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 105px 0 45px;
+
+    overflow: hidden;
+  }
+
+  /* BACKGROUND PHOTO */
+
+  .hero::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(3, 3, 5, 0.95) 0%,
+        rgba(3, 3, 5, 0.78) 52%,
+        rgba(3, 3, 5, 0.35) 100%
+      ),
+      linear-gradient(
+        0deg,
+        rgba(3, 3, 5, 0.92) 0%,
+        transparent 45%,
+        rgba(3, 3, 5, 0.25) 100%
+      ),
+      url("/images/profile.jpeg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    z-index: 0;
+  }
+
+
+  /* CONTENT */
+
+  .hero-container {
+    position: relative;
+
+    width: 88%;
+    margin: 0 auto;
+
+    display: block;
+
+    z-index: 2;
+  }
+
+  .hero-content {
+    width: 100%;
+
+    padding: 20px 0 10px;
+  }
+
+
+  /* INTRO */
+
+  .hero-intro {
+    margin-bottom: 18px;
+
+    font-size: 13px;
+  }
+
+
+  /* TITLE */
+
+  .hero h1 {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0;
+
+    font-size: clamp(52px, 16vw, 68px);
+
+    line-height: 0.92;
+
+    letter-spacing: -3px;
+  }
+
+  .hero h1 .name {
+    margin-top: 8px;
+  }
+
+
+  /* ROLES */
+
+  .hero h2 {
+    margin-top: 24px;
+
+    font-size: 14px;
+
+    line-height: 1.8;
+  }
+
+
+  /* DESCRIPTION */
+
+  .hero-description {
+    max-width: 330px;
+
+    margin-top: 18px;
+
+    font-size: 14px;
+
+    line-height: 1.75;
+
+    color: #b6b6c0;
+  }
+
+
+  /* BUTTONS */
+
+  .hero-buttons {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 27px;
+
+    gap: 10px;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+  }
+
+
+  /* SOCIAL ICONS */
+
+  .hero .social-links {
+    margin-top: 25px;
+
+    display: flex;
+    gap: 10px;
+  }
+
+  .hero .social-links a {
+    width: 43px;
+    height: 43px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* HIDE SEPARATE PROFILE IMAGE */
+
+  .hero-visual {
+    display: none;
+  }
+
+
+  /* HIDE SCROLL INDICATOR */
+
+  .scroll-indicator {
+    display: none;
+  }
+
 }
 
 }
